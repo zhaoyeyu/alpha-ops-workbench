@@ -1,0 +1,2 @@
+"""Deterministic quant research primitives."""
+

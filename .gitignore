@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+release_dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# TaskState local link stays local to this workspace
+.taskstate-vault/
+
+# Quarantined pre-reset artifacts are audit-local and not part of GitHub release
+._quarantine/
+
+# Internal planning and source-of-truth working documents
+dev_plan/
+alpha_ops_workbench_完整开发文档.md
+
+# Data and generated experiment outputs
+storage/raw/**
+storage/lake/**
+storage/warehouse/**
+storage/experiments/**
+storage/reports/**
+!storage/raw/.gitkeep
+!storage/lake/.gitkeep
+!storage/warehouse/.gitkeep
+!storage/experiments/.gitkeep
+!storage/reports/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

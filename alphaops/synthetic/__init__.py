@@ -1,0 +1,2 @@
+"""Synthetic index construction engine."""
+
