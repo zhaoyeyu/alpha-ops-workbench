@@ -1,6 +1,6 @@
 # AlphaOps Workbench Roadmap
 
-AlphaOps Workbench is published as an alpha-stage research workbench. The roadmap is organized by product capability, not by promises that incomplete surfaces are finished.
+AlphaOps Workbench is an alpha-stage research workbench. This roadmap separates implemented and planned capabilities.
 
 ## Product Direction
 
@@ -15,13 +15,13 @@ deterministic quant core
 
 The primary research lines are short-horizon US equity alpha and futures alpha. Equity, ETF, and futures remain first-class asset classes. Crypto is currently an availability-check path, not a fully integrated research asset class.
 
-## Implemented And Verifiable
+## Implemented
 
 ### Product UI
 
 - Chinese-default Streamlit browser workbench with English page content support.
 - Home, Data Hub, Data Quality, Synthetic Index Lab, Alpha Factory, Backtest Lab, Alpha Registry, Risk Monitor, Agent Console, Report Center, Connector Admin, and Evaluation Dashboard.
-- Pages call real services or persisted data instead of static placeholders.
+- Pages use product services or persisted data.
 
 ### Data Platform
 
@@ -82,20 +82,10 @@ The primary research lines are short-horizon US equity alpha and futures alpha. 
 - Structured logs, metrics, diagnostics, backup/restore, and migration tooling.
 - Standalone Windows installer and signed release artifacts.
 
-## Explicitly Not Complete
+## Current Scope Limits
 
 - Live trading, broker order execution, or portfolio management.
 - Production SLA, security audit, regulatory compliance review, or investment-advice suitability.
 - Fully integrated crypto research/backtesting.
 - Provider-independent realtime coverage for all supported asset classes.
-- Institutional validation of calculations, data licenses, or research conclusions.
-
-## Completion Rules
-
-A planned capability is complete only when:
-
-- It performs a real product workflow rather than rendering a placeholder.
-- It uses real or user-supplied data, not fake research results.
-- It has deterministic verification or automated tests.
-- Secrets remain outside source control and release artifacts.
-- Documentation explains setup, limitations, and reproducibility.
+- Independent validation of calculations, data licenses, or research conclusions.

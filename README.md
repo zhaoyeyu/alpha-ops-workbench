@@ -4,13 +4,11 @@
 
 AlphaOps Workbench is a local-first quantitative research workbench for short-horizon US equity alpha and futures alpha. It combines a deterministic quant kernel, agent orchestration, Streamlit research UI, and pluggable data sources.
 
-The browser UI is the product. The command line is only for install, init, launch, API startup, and smoke checks.
+The browser UI is the primary interface. The command line supports installation, initialization, launch, API startup, and smoke checks.
 
-> **Development status: Alpha / work in progress.** The repository contains real, tested research workflows, but it is not yet a production trading platform. It does not place orders, provide investment advice, or guarantee research correctness.
+AlphaOps Workbench is research software. It does not execute trades or provide investment advice.
 
 ## Current Status
-
-Working today:
 
 - Streamlit workbench with 12 product pages.
 - DuckDB storage, data contracts, lineage, and data quality checks.
@@ -19,16 +17,7 @@ Working today:
 - Alpha DSL parsing/validation, factor calculation, IC/RankIC, research backtests, synthetic indexes, Alpha Registry lifecycle, risk review, reports, and evaluation cases.
 - Local wheel installation, Windows scripts, `alphaops configure`, smoke tests, and GitHub Actions CI.
 
-Still incomplete or under active planning:
-
-- Production-grade realtime market-data persistence and resilient streaming operations.
-- Databento/IBKR futures adapters, continuous-contract construction from provider data, and provider-specific session calendars.
-- Formal crypto asset-class integration across contracts, storage, quality, research, and backtesting.
-- Full LLM-backed research workflows through OpenRouter; current agent orchestration is constrained by deterministic tools and requires user-supplied keys/models.
-- Richer interactive visualizations, workflow ergonomics, multi-user authentication, deployment hardening, observability, and standalone desktop installer.
-- Independent validation of research assumptions, market-data entitlements, and numerical correctness for production use.
-
-See [docs/ROADMAP.md](docs/ROADMAP.md) for the capability roadmap and acceptance criteria.
+See [docs/ROADMAP.md](docs/ROADMAP.md) for planned capabilities.
 
 ## Implemented Product Pages
 
@@ -103,7 +92,7 @@ Local CSV/Parquet is treated as a Private Data Ingestion Adapter. It enters the 
 
 ## Market Data Ingestion
 
-Use the Streamlit `数据中心 / Data Hub` page:
+Use the Streamlit `???? / Data Hub` page:
 
 - Public US equity/ETF: set `MASSIVE_API_KEY`, enter symbols such as `NVDA,MSFT,QQQ`, choose dates/frequency, then fetch through the Massive Market Data adapter.
 - Public US equity fallback: yfinance remains available, but it may be rate-limited by its upstream source.
@@ -125,8 +114,6 @@ python -m build
 alphaops smoke
 ```
 
-Before publishing, run a local secret scan for OpenRouter-style keys and environment-variable assignments. Do not commit raw key values or known leaked key fragments.
-
 Current validated baseline: 112 pytest tests pass.
 
 ## Documentation
@@ -135,4 +122,3 @@ Current validated baseline: 112 pytest tests pass.
 - `docs/USER_GUIDE.md`
 - `docs/DEMO_GUIDE.md`
 - `docs/ROADMAP.md`
-- `docs/GITHUB_RELEASE_CHECKLIST.md`

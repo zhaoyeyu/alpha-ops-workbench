@@ -14,6 +14,8 @@ jobs:
           python-version: "3.11"
       - name: Install
         run: python -m pip install -e ".[dev]"
+      - name: Public boundary
+        run: python scripts/check_public_boundary.py
       - name: Tests
         run: python -m pytest
       - name: Compile
