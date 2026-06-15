@@ -50,4 +50,4 @@ After starting the UI, open these pages:
 - Connector Admin
 - Evaluation Dashboard
 
-Every page is expected to use real product services or persisted data. Static placeholder pages are not accepted as completion.
+The demo pages use product services or persisted data so the walkthrough reflects the implemented workflows.

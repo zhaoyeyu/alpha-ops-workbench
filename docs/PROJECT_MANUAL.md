@@ -28,7 +28,7 @@ The main UI is the Streamlit browser workbench. The CLI is only a launcher and l
 
 OpenRouter is only the LLM gateway for planning, formula generation, report generation, and research workflow support. It is not a market data source. Raw API keys must be stored in environment variables only.
 
-Local CSV/Parquet is the Private Data Ingestion Adapter. It is not an offline fallback; it simulates institutional private data ingestion and enters the same Data Contract, Lineage, and Quality flow as public data.
+Local CSV/Parquet is the Private Data Ingestion Adapter. Imported datasets enter the same Data Contract, Lineage, and Quality flow as public data.
 
 Massive Market Data is an authenticated public-online Equity/ETF adapter. It uses `MASSIVE_API_KEY`; raw credentials must remain in environment variables. Alpaca Market Data remains an optional authenticated public-online Equity adapter using `ALPACA_API_KEY_ID`, `ALPACA_API_SECRET_KEY`, and optional `ALPACA_DATA_FEED`.
 

@@ -14,6 +14,8 @@ FORBIDDEN = {
     "internal release decisions": re.compile(r"Repository And Release Decisions", re.I),
     "provider budget instructions": re.compile(r"(remaining provider budget|budget guidance)", re.I),
     "defensive authenticity claim": re.compile(r"(not fake|real product workflow|not by promises)", re.I),
+    "internal acceptance language": re.compile(r"not accepted as completion", re.I),
+    "institutional simulation framing": re.compile(r"simulates institutional private data ingestion|?????????????", re.I),
 }
 
 
